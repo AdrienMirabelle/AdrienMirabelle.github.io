@@ -1,210 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Adrien Mirabelle</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Start Bootstrap</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Mon parcours</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Mes projets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacte</a></li>
-                        </ul>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Adrien Mirabelle</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <!-- Custom Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Adrien Mirabelle</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Mon parcours</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Mes projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- Search bar -->
+                    <form class="d-flex ms-auto">
+                        <input id="searchBar" class="form-control me-2" type="search" placeholder="Recherche..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Projects Section -->
+        <section class="py-5">
+            <div class="container px-5 mb-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Mes projets</span></h1>
+                </div>
+                <div class="row gx-5 justify-content-center" id="projectsContainer">
+                    <!-- Projects will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+        <!-- Call to action section -->
+        <section class="py-5 bg-gradient-primary-to-secondary text-white">
+            <div class="container px-5 my-5">
+                <div class="text-center">
+                    <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0">Copyright &copy; Adrien Mirabelle 2023</div></div>
+                <div class="col-auto">
+                    <a class="small" href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a class="small" href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
+    <!-- Custom script for projects -->
+    <script>
+        const projects = [
+            {
+                title: "Détection d'armes",
+                description: "Repérer une arme en temps réel sur une vidéo.",
+                tags: ["Python", "YOLO", "OpenCV"],
+                image: "assets/yolo_gun.png",
+                details: "A l'aide de Python, de YOLO et OpenCV, ce projet..."
+            },
+            {
+                title: "MongoFlix",
+                description: "CRUD avec MongoDB et Web App React.",
+                tags: ["React", "Python", "MongoDB"],
+                image: "assets/Netflix_png.png",
+                details: "Ce projet consistait à utiliser un dataset de films..."
+            },
+            {
+                title: "Spotify App",
+                description: "Recherche de musique avec Spotipy et React.",
+                tags: ["React", "Python", "Spotipy", "MongoDB"],
+                image: "assets/spotify_png.png",
+                details: "Création d'une application pour interagir avec Spotify..."
+            }
+        ];
+
+        const projectsContainer = document.getElementById("projectsContainer");
+
+        // Generate project cards
+        projects.forEach((project, index) => {
+            const card = document.createElement("div");
+            card.classList.add("col-lg-4", "mb-4");
+
+            card.innerHTML = `
+                <div class="card overflow-hidden shadow rounded-4 border-0">
+                    <img class="card-img-top" src="${project.image}" alt="${project.title}">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bolder">${project.title}</h5>
+                        <p class="card-text">${project.description}</p>
+                        <div class="tags mb-3">
+                            ${project.tags.map(tag => `<span class="badge bg-primary me-1">${tag}</span>`).join("")}
+                        </div>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal${index}">En savoir plus</button>
                     </div>
                 </div>
-            </nav>
-            <!-- Projects Section-->
-            <section class="py-5">
-                <div class="container px-5 mb-5">
-                    <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projets scolaires (Le choix des sujets était ouvert)</span></h1>
-                    </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Détection d'armes</h2>
-                                            <p>A l'aide de Python, de la librairie YOLO (You Only Look Once) et d'OpenCV  ce projet consistait à repérer une arme en temps réel sur une vidéo (utilisé notamment pour la vidéo-surveillance) </p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\yolo_gun.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 2-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">MongoFlix</h2>
-                                            <p>En se basant sur un dataset de films et en le téléchargeant sur MongoDB, un CRUD à été réalisé en Python avec la librairie pymongo et la réalisation d'une WebAPP en React (paramétrer avec Veet) </p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\Netflix_png.png" alt="..." />
-                                    </div>
-                            <!-- Project Card 3-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Spotify</h2>
-                                            <p>Projet consitant à réaliser des opérations de recherches sur Spotify avec une Web App React + Veet, un backend-end en Python avec l'utilisation de la librairie Spotipy et d'une base de données MongoDB </p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\spotify_png.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 4-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Machine Learning : Credit Scoring</h2>
-                                            <p> Réalisation d'une Web App avec un tableau de bord interactif permettant d'évaluer le risque d'une personne à rembourser un crédit immobillier </p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\credit_scoring.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 5-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Docker & Kubernetes</h2>
-                                            <p>Projet de conteneurisation Docker via VirtualBox (Distribution Ubuntu) avec la mise en place de serveurs web avec l'image php:apache, d'un proxy avec l'image nginx et d'un load-balancer. Mise en place de cron et d'openssh afin d'envoyer un fichier "index.html" aux serveurs web toutes les 5 minutes</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\docker.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 6-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Gestion de projet Agile & SCRUM</h2>
-                                            <p>Etude de cas sur la création d'une application mobile de restauration en utilisant les techniques Agile et Scrum</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\agile_scrum.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 7-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Architecture Big Data</h2>
-                                            <p>Utilisation d'Hadoop, Kafka, Spark, Python, MongoDB ainsi que Docker et de l'image Cloudera dans le cadre de multi-projets sur des datasets tels que les archives météorologiques NOAA, IoT SensorData, DHL, Allocine</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\big_data_architecture.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 8-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Web-Scrapping</h2>
-                                            <p>Etude de cas visant à récupérer les notations des restaurants "à risques" grâce à un modèle d'IA sur le site "The Fork" pour les services d'hygiènes. Utilisation de BeautifulSoup, Selenium, Python (Scikit-Learn) et MongoDB </p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\the_fork.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 9-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Google Cloud Plateform - Vertex AI</h2>
-                                            <p>Créer, entraîner et déployer un modèle de classification d'images en utilisant
-                                            TensorFlow et Vertex AI (étude sur le cancer du sein).</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\gcp.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 10-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Organisation de la sécurité</h2>
-                                            <p> Etude de cas sur une entreprise fictive visant à entreprendre un plan de reprise d'activité (PRA), un plan de continuité d'activité (PCA) et les stratégies de continuité résultantes</p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\pca_pra.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 11-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Programmation et statistique en langage R</h2>
-                                            <p>Utilisation du Framework Shiny afin de créer une Web App en langage R, ainsi que la réalisation un modèle de prédiction (Random Forest) sur un dataset de prévention d'une maladie cardiaque </p>
-                                        </div>
-                                        <img class="img-fluid" src="assets\r_logo.png" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
+            `;
+
+            projectsContainer.appendChild(card);
+
+            // Generate modal for the project
+            const modal = document.createElement("div");
+            modal.classList.add("modal", "fade");
+            modal.id = `projectModal${index}`;
+            modal.setAttribute("tabindex", "-1");
+            modal.setAttribute("aria-labelledby", `projectModalLabel${index}`);
+            modal.setAttribute("aria-hidden", "true");
+
+            modal.innerHTML = `
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="projectModalLabel${index}">${project.title}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>${project.details}</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Call to action section-->
-            <section class="py-5 bg-gradient-primary-to-secondary text-white">
-                <div class="container px-5 my-5">
-                    <div class="text-center">
-                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Your Website 2023</div></div>
-                    <div class="col-auto">
-                        <a class="small" href="#!">Privacy</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Terms</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+            `;
+
+            document.body.appendChild(modal);
+        });
+
+        // Search functionality
+        document.getElementById("searchBar").addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+            const projectCards = document.querySelectorAll(".col-lg-4");
+
+            projectCards.forEach(card => {
+                const cardText = card.innerText.toLowerCase();
+                if (cardText.includes(query)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
 </html>
