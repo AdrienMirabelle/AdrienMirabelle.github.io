@@ -86,34 +86,40 @@
             // Initialise EmailJS avec ta clé publique
             emailjs.init("7oI8MV3MXNW-BmhsJ");
         })();
-
+    
         // Fonction pour gérer l'envoi du formulaire
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Empêche l'envoi réel du formulaire
-
+    
             // Exécution de reCAPTCHA v3 pour obtenir un jeton
-            grecaptcha.execute('6Lc8wJcqAAAAAEbjgaKfkLR4u6KAmAAzFSBpFpUY', { action: 'submit' })
-                .then(function (recaptchaToken) {
-                    // Récupère les données du formulaire
-                    const form = event.target;
-                    const formData = {
-                        from_name: form.querySelector('#name').value,
-                        email: form.querySelector('#email').value,
-                        message: form.querySelector('#message').value,
-                        recaptchaToken: recaptchaToken // Ajoute le jeton reCAPTCHA
-                    };
-
-                    // Envoie les données via EmailJS
-                    emailjs.send("service_8sbmckf", "template_6x7ms1d", formData)
-                        .then(() => {
-                            alert("Votre message a été envoyé avec succès !");
-                            form.reset(); // Réinitialise le formulaire
-                        }, (error) => {
-                            console.error("Erreur lors de l'envoi :", error);
-                            alert("Une erreur s'est produite. Veuillez réessayer.");
-                        });
-                });
+            grecaptcha.enterprise.ready(function () {
+                grecaptcha.enterprise.execute('6Lc8wJcqAAAAAEbjgaKfkLR4u6KAmAAzFSBpFpUY', { action: 'submit' })
+                    .then(function (recaptchaToken) {
+                        // Récupère les données du formulaire
+                        const form = event.target;
+                        const formData = {
+                            from_name: form.querySelector('#name').value,
+                            email: form.querySelector('#email').value,
+                            message: form.querySelector('#message').value,
+                            recaptchaToken: recaptchaToken // Ajoute le jeton reCAPTCHA
+                        };
+    
+                        // Envoie les données via EmailJS
+                        emailjs.send("service_8sbmckf", "template_6x7ms1d", formData)
+                            .then(() => {
+                                alert("Votre message a été envoyé avec succès !");
+                                form.reset(); // Réinitialise le formulaire
+                            }, (error) => {
+                                console.error("Erreur lors de l'envoi :", error);
+                                alert("Une erreur s'est produite. Veuillez réessayer.");
+                            });
+                    }).catch(function (error) {
+                        console.error("Erreur lors de l'exécution de reCAPTCHA :", error);
+                        alert("Impossible de valider le reCAPTCHA. Veuillez réessayer.");
+                    });
+            });
         });
     </script>
+    
 </body>
 </html>
