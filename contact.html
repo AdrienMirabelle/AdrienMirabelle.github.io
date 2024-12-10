@@ -16,6 +16,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    
+    <!-- Script pour reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc8wJcqAAAAAEbjgaKfkLR4u6KAmAAzFSBpFpUY"></script>
 </head>
 <body class="d-flex flex-column">
     <main class="flex-shrink-0">
@@ -58,16 +61,13 @@
                                     <input class="form-control" id="email" type="email" placeholder="nom@exemple.com" required />
                                     <label for="email">Adresse email</label>
                                 </div>
-                                <!-- Phone number input
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" required />
-                                    <label for="phone">Numéro de téléphone</label>
-                                </div> -->
                                 <!-- Message input-->
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" id="message" placeholder="Entrez votre message ici..." style="height: 10rem" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
+                                <!-- reCAPTCHA -->
+                                <div class="g-recaptcha" data-sitekey="6Lc8wJcqAAAAAEbjgaKfkLR4u6KAmAAzFSBpFpUY"></div>
                                 <!-- Submit Button-->
                                 <div class="d-grid">
                                     <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Envoyer</button>
@@ -93,13 +93,21 @@
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Empêche l'envoi réel du formulaire
 
+            // Récupère le jeton reCAPTCHA
+            const recaptchaToken = grecaptcha.getResponse();
+
+            if (recaptchaToken === "") {
+                alert("Veuillez valider le reCAPTCHA.");
+                return; // Empêche l'envoi si le reCAPTCHA n'est pas validé
+            }
+
             // Récupère les données du formulaire
             const form = event.target;
             const formData = {
                 from_name: form.querySelector('#name').value,
                 email: form.querySelector('#email').value,
-                phone: form.querySelector('#phone').value,
                 message: form.querySelector('#message').value,
+                recaptchaToken: recaptchaToken
             };
 
             // Envoie les données via EmailJS
@@ -107,6 +115,7 @@
                 .then(() => {
                     alert("Votre message a été envoyé avec succès !");
                     form.reset(); // Réinitialise le formulaire
+                    grecaptcha.reset(); // Réinitialise le reCAPTCHA
                 }, (error) => {
                     console.error("Erreur lors de l'envoi :", error);
                     alert("Une erreur s'est produite. Veuillez réessayer.");
