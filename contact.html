@@ -34,6 +34,7 @@
                 </div>
             </div>
         </nav>
+
         <!-- Page content-->
         <section class="py-5">
             <div class="container px-5">
@@ -78,24 +79,24 @@
             </div>
         </section>
     </main>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <!-- EmailJS integration-->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function () {
             // Initialise EmailJS avec ta clé publique
             emailjs.init("7oI8MV3MXNW-BmhsJ");
         })();
 
+        // Fonction pour gérer l'envoi du formulaire
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Empêche l'envoi réel du formulaire
 
             // Récupère les données du formulaire
             const form = event.target;
             const formData = {
-                name: form.querySelector('#name').value,
+                from_name: form.querySelector('#name').value,
                 email: form.querySelector('#email').value,
                 phone: form.querySelector('#phone').value,
                 message: form.querySelector('#message').value,
