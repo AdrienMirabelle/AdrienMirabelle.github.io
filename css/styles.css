@@ -11732,12 +11732,6 @@ html {
     left: -2vw;
   }
 
-    .badge {
-      margin-bottom: 20px; /* Ajuste cette valeur pour espacer davantage */
-  }
 
-  .text-center.text-xxl-start {
-      margin-top: -10px; /* Augmente cette valeur pour réhausser le texte */
-  }
 
 }
