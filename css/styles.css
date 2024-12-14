@@ -11732,16 +11732,22 @@ html {
     left: -2vw;
   }
 
-  @media (max-width: 576px) { /* Pour écrans de petite taille */
-      .badge-mobile-wrap {
-          word-break: break-word;     /* Force la coupure des mots */
-          overflow-wrap: break-word;  /* Alternative pour assurer le passage à la ligne */
-          white-space: normal;        /* Autorise le retour à la ligne */
-          font-size: 12px;            /* Réduit la taille du texte pour un meilleur rendu */
-          line-height: 1.3;           /* Améliore l'espacement vertical */
-          text-align: center;         /* Centre le texte */
-      }
+  /* Titre responsive */
+.badge.text-uppercase {
+  word-wrap: break-word; /* Casse les mots longs */
+  overflow-wrap: break-word; /* Compatibilité pour tous les navigateurs */
+  white-space: normal; /* Assure un retour à la ligne */
+  text-align: center; /* Centre le texte */
+}
+
+/* Réduction de la taille du texte sur les écrans mobiles */
+@media (max-width: 576px) {
+  .badge.text-uppercase {
+      font-size: 0.8rem; /* Ajuste la taille pour les petits écrans */
+      line-height: 1.2; /* Améliore l'espacement vertical */
   }
+}
+
 
 
 
