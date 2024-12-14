@@ -11732,6 +11732,13 @@ html {
     left: -2vw;
   }
 
+  @media (max-width: 576px) { /* Pour les écrans de petite taille */
+    .badge-mobile-wrap {
+        word-wrap: break-word; /* Coupe les mots si nécessaire */
+        white-space: normal;   /* Assure que le texte passe à la ligne */
+        text-align: center;    /* Centre le texte pour une meilleure lisibilité */
+    }
+}
 
 
 }
